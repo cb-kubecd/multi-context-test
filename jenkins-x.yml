@@ -1,0 +1,15 @@
+buildPack: none
+pipelineConfig:
+  pipelines:
+    pullRequest:
+      pipeline:
+        agent:
+          image: busybox
+        stages:
+        - name: release
+          steps:
+          - image: busybox
+            command: sleep
+            args:
+            - "30"
+
